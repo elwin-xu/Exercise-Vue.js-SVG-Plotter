@@ -46,6 +46,9 @@ var input = new Vue({
             this.errorMsg += `Error: too many parameters, line ${i+1}.\n`
             continue;
           }
+          else if (line.length < 4){
+            continue;
+          }
           
           if (!isAllInt(line)){
             this.errorMsg += `Error: not all parameters are integers, line ${i+1}.\n`;
@@ -66,6 +69,9 @@ var input = new Vue({
           
           if (line.length > 5){
             this.errorMsg += `Error: too many parameters, line ${i+1}.\n`
+            continue;
+          }
+          else if (line.length < 5){
             continue;
           }
           
@@ -90,6 +96,10 @@ var input = new Vue({
           var re = /,/gi;
           var linePoly = text[i].replace(re, " ").trim().split(/\s+/);
           
+          if (linePoly.length %2 == 0){
+            continue;
+          }
+
           if (!isAllInt(linePoly)){
             this.errorMsg += `Error: not all parameters are integers, line ${i+1}.\n`;
             continue;
@@ -115,6 +125,9 @@ var input = new Vue({
             this.errorMsg += `Error: too many parameters, line ${i+1}.\n`
             continue;
           }
+          else if (line.length < 5){
+            continue;
+          }
           
           if (!isAllInt(line)){
             this.errorMsg += `Error: not all parameters are integers, line ${i+1}.\n`;
@@ -132,7 +145,8 @@ var input = new Vue({
           continue;
         }
         
-        else{
+        else
+        {
           // unrecognized shape type 
           this.errorMsg += `Error: invalid shape type, line ${i+1}.\n`
         }
