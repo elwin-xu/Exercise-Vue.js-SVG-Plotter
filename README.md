@@ -4,7 +4,7 @@ An application that can be used to draw SVG elements on the web page in real tim
 
 ## How to Run the Plotter
 
-Simply open index.html in a browser to run the plotter. Alternatively, the project is already hosted on my Github page. If you have Internet access, visit the following website: [https://zixuan-xu.github.io/Exercise-SVG.Plotter/](https://zixuan-xu.github.io/Exercise-SVG.Plotter/)
+Simply open index.html in a browser to run the plotter. Alternatively, the project is already hosted on my Github page. If you have Internet access, visit the following website: https://zixuan-xu.github.io/SVG-plotter/
 
 ### Plotter Area
 
