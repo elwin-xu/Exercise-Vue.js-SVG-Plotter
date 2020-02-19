@@ -6,7 +6,12 @@ var input = new Vue({
     colourArray: [],  // random generated colour for each shape
     rawHtml:          // raw html to create a <svg> element
       "<svg id=\"plotter\" name=\"plotter\" viewBox=\"0 0 250 250\" width=\"250\" height=\"250\"></svg>",
-    errorMsg: ""      // error message displayed
+    errorMsg: "",      // error message displayed
+    description: "Please Enter Commands:\n\
+    R <X> <Y> <Width> <Height> - Rectangle\n\
+    E <CX> <CY> <RX> <RY> - Eclipse\n\
+    C <CX> <CY> <R> - Circle\n\
+    P <X1,Y1> <X2,Y2> <X3,Y3> ..... <Xn,Yn> - Polygon"
   },
   watch: {
     message: function (val) {
@@ -176,6 +181,7 @@ var randomColour = function () {
 */
 function isInt(value) {
   return /^-{0,1}\d+$/.test(value);
+  
 }
 
 /**

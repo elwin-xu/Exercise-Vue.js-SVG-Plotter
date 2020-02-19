@@ -17,8 +17,16 @@
 
     <div class="inputArea">
       <label for="inputTextBox">Input Text Box</label>
-      <textarea v-model="message" placeholder="please enter commands" id="inputTextBox" name="inputTextBox" rows="4"
+      <textarea v-model="message" v-bind:title="description" v-bind:placeholder="description" id="inputTextBox" name="inputTextBox" rows="4"
         cols="50" wrap="off"></textarea>
+
+        <!--
+        <div class="description">
+          R &lt;X Coordinate&gt; &lt;Y Coordinate&gt; &lt;Width&gt; &lt;Height&gt; - Draw a rectangle<br>
+          C &lt;CX Coordinate&gt; &lt;CY Coordinate&gt; &lt;Radius&gt; - Draw a circle<br>
+          P &lt;X1,Y1&gt; &lt;X2,Y2&gt; &lt;X3,Y3&gt; ..... &lt;Xn,Yn&gt; - Draw a polygon<br>
+        </div>
+        -->
 
       <label for="errMsgBox">Error Message</label>
       <textarea readonly id="errMsgBox" name="errMsgBox" rows="4" cols="50" wrap="off">{{ errorMsg }}</textarea>

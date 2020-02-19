@@ -25,6 +25,12 @@ div.inputArea
     padding-bottom: 10px;
 }
 
+div.description
+{
+    display: block;
+    align-items: center;
+}
+
 body {
     margin: 0px;
     background-color: lightgrey;
